@@ -5,7 +5,7 @@ variable "aws_region" {
 
 variable "av_zone" {
   description = "AWS region"
-  default     = "us-east-1a"
+  default     = "us-east-1b"
 }
 
 variable "ami_id" {
