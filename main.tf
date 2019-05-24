@@ -18,8 +18,8 @@ resource "aws_instance" "demo_ec2" {
 
   tags {
     Name  = "${var.name}"
-    owner = "${var.owner}"
-    ttl   = "${var.ttl}"
+    Owner = "${var.owner}"
+    TTL   = "${var.ttl}"
   }
 }
 
