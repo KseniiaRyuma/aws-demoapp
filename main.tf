@@ -8,7 +8,7 @@ provider "aws" {
 
 resource "null_resource" "get-go" {
   provisioner "local-exec" {
-    command = "sudo apt-get install golang-go"
+    command = "sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get install golang"
   }
 }
 
