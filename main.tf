@@ -6,8 +6,10 @@ provider "aws" {
   region = "${var.aws_region}"
 }
 
-provisioner "local-exec" "get-go" {
-  command = "sudo apt-get install golang-go"
+resource "null_resource" "get-go" {
+  provisioner "local-exec" {
+    command = "sudo apt-get install golang-go"
+  }
 }
 
 resource "aws_instance" "demo_ec2" {
@@ -22,6 +24,6 @@ resource "aws_instance" "demo_ec2" {
   }
   provisioner "local-exec" {
     command = "go run hello-world.go"
-    depends_on = ["local-exec.get-go"]
+    depends_on = ["null_resource.get-go"]
   }
 }
