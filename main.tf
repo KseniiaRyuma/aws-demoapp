@@ -17,6 +17,7 @@ resource "aws_instance" "demo_ec2" {
   instance_type = "${var.instance_type}"
   availability_zone = "${var.aws_region}b"
   associate_public_ip_address = "true"
+  depends_on = ["null_resource.get-go"]
   tags {
     Name = "${var.name}"
     Owner = "${var.owner}"
@@ -24,6 +25,5 @@ resource "aws_instance" "demo_ec2" {
   }
   provisioner "local-exec" {
     command = "go run hello-world.go"
-    depends_on = ["null_resource.get-go"]
   }
 }
