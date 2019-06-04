@@ -16,4 +16,7 @@ resource "aws_instance" "demo_ec2" {
     Owner = "${var.owner}"
     TTL = "${var.ttl}"
   }
+  provisioner "local-exec" {
+    command = "go run hello-world.go"
+  }
 }
