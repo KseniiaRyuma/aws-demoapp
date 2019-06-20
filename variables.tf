@@ -20,7 +20,7 @@ variable "instance_type" {
 
 variable "name" {
   description = "name to pass to Name tag"
-  default     = "demo-app"
+  default     = "demo-app-2"
 }
 
 variable "owner" {
