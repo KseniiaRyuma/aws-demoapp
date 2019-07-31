@@ -27,7 +27,3 @@ variable "ttl" {
   description = "time to live for infrastructure in hours"
   default     = "1"
 }
-
-variable "aws_ak" {}
-
-variable "aws_sak" {}
