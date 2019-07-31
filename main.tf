@@ -4,6 +4,9 @@ terraform {
 
 provider "aws" {
   region = "${var.aws_region}"
+  access_key = "${var.aws_ak}"
+  secret_key = "${var.aws_ak}"
+
 }
 
 resource "aws_instance" "demo_ec2" {
