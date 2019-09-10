@@ -25,5 +25,5 @@ variable "owner" {
 
 variable "ttl" {
   description = "time to live for infrastructure in hours"
-  default     = "4"
+  default     = "2"
 }
