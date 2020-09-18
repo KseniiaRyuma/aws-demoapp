@@ -32,3 +32,8 @@ variable "allowed_ingress_cidr" {
   description = "list of cidrs to allow"
   default     = ["0.0.0.0/0"]
 }
+
+variable "ec2_count" {
+  description = "number of ec2 instances to deploy"
+  default     = 1
+}
