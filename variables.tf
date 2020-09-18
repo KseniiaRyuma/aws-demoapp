@@ -28,3 +28,7 @@ variable "ttl" {
   default     = "1"
 }
 
+variable "allowed_ingress_cidr" {
+  description = "list of cidrs to allow"
+  default     = ["0.0.0.0/0"]
+}
