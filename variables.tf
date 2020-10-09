@@ -25,7 +25,7 @@ variable "owner" {
 
 variable "ttl" {
   description = "time to live for infrastructure in hours"
-  default     = "1"
+  default     = "2"
 }
 
 variable "allowed_ingress_cidr" {
