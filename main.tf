@@ -41,4 +41,9 @@ resource "aws_security_group" "demo-sg" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
+  tags = {
+    Name  = var.name
+    Owner = var.owner
+    TTL   = var.ttl
+  }
 }
