@@ -20,7 +20,7 @@ variable "name" {
 
 variable "owner" {
   description = "name of person creating"
-  default     = "ryuma"
+  default     = "kseniia-ryuma"
 }
 
 variable "ttl" {
